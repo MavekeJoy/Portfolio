@@ -1,14 +1,16 @@
+// LandingPage.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";  // Import Link for navigation
 import profileImage from "../assets/landing.jpeg";
 import logo from "../assets/logo.png";
 
 const LandPage = () => {
   return (
-    <div className="bg-background-dark text-text-light min-h-screen">
+    <div className= "bg-background-dark text-text-light min-h-screen">
       {/* Navigation */}
-      <nav className="w-full flex justify-between items-center p-6 shadow-md bg-background-dark/90 backdrop-blur-lg fixed top-0 z-10">
-        <div className="flex items-center space-x-4">
+      <nav className= "w-full flex justify-between items-center p-6 shadow-md bg-background-dark/90 backdrop-blur-lg fixed top-0 z-10">
+        <div className= "flex items-center space-x-4">
           {/* Navigation Links */}
           <div className="flex space-x-8">
             {["Home", "Service", "Projects", "Blog"].map((item) => (
@@ -43,7 +45,7 @@ const LandPage = () => {
           className="bg-gradient-to-r from-[#2C3E50] to-[#34495E] text-text-light w-full md:w-1/2 h-full flex flex-col items-center justify-center p-10 space-y-6"
         >
           {/* Logo Background */}
-          <div className="bg-gradient-to-r from-[#2C3E50] to-[#34495E] p-6 rounded-full shadow-lg mix-blend-overlay">
+          <div className= "bg-gradient-to-r from-[#2C3E50] to-[#34495E] p-6 rounded-full shadow-lg mix-blend-overlay">
             <motion.img
               src={logo}
               alt="Logo"
@@ -59,12 +61,15 @@ const LandPage = () => {
             Software Developer || Web Developer || UI/UX Designer || Video Editor
           </p>
           
-          <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: "#14B8A6" }}
-            className= "bg-accent hover:bg-secondary text-text-light px-6 py-2 rounded-lg shadow-md transition duration-300"
-          >
-            About Me
-          </motion.button>
+          {/* Update the button to use Link */}
+          <Link to="/about">  {/* Link to AboutMe page */}
+            <motion.button
+              whileHover={{ scale: 1.05, backgroundColor: "#14B8A6" }}
+              className="bg-accent hover:bg-secondary text-text-light px-6 py-2 rounded-lg shadow-md transition duration-300"
+            >
+              About Me
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Right Side */}
