@@ -1,7 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBullseye, faLightbulb, faTimes } from "@fortawesome/free-solid-svg-icons";  // Import the X icon
+import { faBullseye, faLightbulb, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+
 import { useNavigate } from "react-router-dom";  // Import useNavigate for navigation
 
 const AboutMe = () => {
@@ -13,7 +15,7 @@ const AboutMe = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-4 py-40"
+      className= "min-h-screen flex items-center justify-center px-4 py-40"
       style={{ backgroundColor: "#34495E" }} // Outer background color
     >
       <div
@@ -87,7 +89,9 @@ const AboutMe = () => {
           </div>
           {/* Right Section: Introduction */}
           <div className="flex-1 space-y-6">
-            <h2 className="text-2xl font-bold">Hello There!</h2>
+            <h2 className="text-2xl font-bold flex items-center"> 
+              Hello There!
+            </h2>
             <p className="text-base leading-7">
               I am a results-driven software engineer with expertise in both
               frontend and backend development, specializing in HTML, CSS,
@@ -95,7 +99,7 @@ const AboutMe = () => {
               editing, combining technical skills with creativity to deliver
               impactful solutions.
             </p>
-            <h2 className="text-2xl font-bold">My Journey</h2>
+            <h2 className="text-2xl font-bold">My Journey !</h2>
             <p className="text-base leading-7">
               Technology has always fascinated me, sparking a deep curiosity
               from an early age. This passion led me to pursue a Diploma in
@@ -105,6 +109,12 @@ const AboutMe = () => {
               which transformed my interest into expertise. Along the way, I've
               grown into a versatile software engineer, driven by the desire to
               create impactful solutions and continuously innovate.
+            </p>
+            <h2 className="text-2xl font-bold">Life beyond Lines of Code !</h2>
+            <p className="text-base leading-7">
+              When I'm not coding, you can find me watching movies, listening to music, spending 
+              time with my friends, engaging in team activities such as hiking, playing sports, or 
+              volunteering.
             </p>
           </div>
         </div>
