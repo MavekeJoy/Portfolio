@@ -23,7 +23,7 @@ const ServicesSection = () => {
       {/* Exit Icon */}
       <button 
         onClick={handleExitClick} 
-        className="absolute top-6 right-6 text-2xl text-white"
+        className="absolute top-6 right-6 text-4xl text-white hover:text-teal-400 transition duration-150"
       >
         <FaTimes />
       </button>
@@ -31,9 +31,9 @@ const ServicesSection = () => {
       {/* Separator */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-accent rounded-full"></div>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">What Can I Do</h2>
+      <h2 className="text-3xl md:text-6xl font-bold text-center mb-10 text-teal-400">My Services</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -57,7 +57,7 @@ const ServicesSection = () => {
               transition={{ duration: 0.6 }}
               style={{ backfaceVisibility: "hidden" }}
             >
-              <p className="text-gray-400">{service.description}</p>
+              <p className="text-lg text-gray-400 font-medium">{service.description}</p>
             </motion.div>
           </motion.div>
         ))}
